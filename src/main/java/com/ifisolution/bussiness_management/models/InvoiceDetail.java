@@ -22,6 +22,7 @@ public class InvoiceDetail implements Serializable {
     private Product product;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "invoiceId", referencedColumnName = "id")
+    // spring báo là đoạn này có lặp nên chỉ lấy id
     @JsonIncludeProperties("id")
     private Invoice invoice;
     private int quantity;

@@ -39,6 +39,7 @@ public class InvoiceDetailService {
 
     public InvoiceDetail addInvoiceDetail(InvoiceDetailDto invoiceDetailDto) {
         Invoice invoice = invoiceRepo.findById(invoiceDetailDto.getInvoiceId()).orElseThrow(() -> new InvoiceNotFoundException("Invoice by id " + invoiceDetailDto.getInvoiceId() + " was not found"));
+        //DTO để string nên phải parse sang Long mới tìm đc
         Product product = productRepo.findById(Long.parseLong(invoiceDetailDto.getProduct())).orElseThrow(() -> new ProductNotFoundException("Product by id " + invoiceDetailDto.getProduct() + " was not found"));
 
         if (product.getQuantity() - invoiceDetailDto.getQuantity() < 0) {
