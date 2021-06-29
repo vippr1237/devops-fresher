@@ -37,6 +37,7 @@ public class AuthService {
     }
 
     public AuthenticateResponse login(LoginRequest loginRequest) {
+        // authenticate nhơ object này của spring security
         Authentication authenticate = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getUsername(), loginRequest.getPassword()));

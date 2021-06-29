@@ -18,6 +18,7 @@ import static java.util.Collections.singletonList;
 
 @Service
 @AllArgsConstructor
+//viết lại interface này để nó lấy người dùng từ database
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepo userRepo;
@@ -29,6 +30,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         User user = userOptional.orElseThrow(() -> new UsernameNotFoundException("No user " +
                 "Found with username : " + username));
 
+        //xong trả về kiểu User spring security hiểu
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
                 true, true, true,
                 true, getAuthorities());

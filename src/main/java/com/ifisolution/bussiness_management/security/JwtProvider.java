@@ -27,9 +27,11 @@ public class JwtProvider {
     private Long jwtExpirationInMillis;
 
     @PostConstruct
+    //đoạn này khởi tạo keystore
     public void init() {
         try {
             keyStore = KeyStore.getInstance("JKS");
+            // file jks này phải tự tạo nên tìm hiểu thêm vì đi copy
             InputStream resourceAsStream = getClass().getResourceAsStream("/springblog.jks");
             keyStore.load(resourceAsStream, "secret".toCharArray());
         } catch (KeyStoreException | CertificateException | NoSuchAlgorithmException | IOException e) {
@@ -59,6 +61,7 @@ public class JwtProvider {
 
     private PrivateKey getPrivateKey() {
         try {
+            // lấy key trong key store
             return (PrivateKey) keyStore.getKey("springblog", "secret".toCharArray());
         } catch (KeyStoreException | NoSuchAlgorithmException | UnrecoverableKeyException e) {
             throw new AppException("Exception occured while retrieving public key from keystore", e);
