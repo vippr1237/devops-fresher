@@ -26,7 +26,9 @@ public class AuthService {
     private final JwtProvider jwtProvider;
 
     @Transactional
-    public void signup(RegisterRequest registerRequest) {
+    public boolean signup(RegisterRequest registerRequest) {
+        if (userRepo.existsByUsername(registerRequest.getUsername()))
+            return false;
         User user = new User();
         user.setUsername(registerRequest.getUsername());
         user.setEmail(registerRequest.getEmail());
@@ -34,6 +36,7 @@ public class AuthService {
         user.setCreateAt(Instant.now());
 
         userRepo.save(user);
+        return true;
     }
 
     public AuthenticateResponse login(LoginRequest loginRequest) {

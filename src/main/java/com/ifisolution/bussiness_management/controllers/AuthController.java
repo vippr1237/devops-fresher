@@ -19,9 +19,13 @@ public class AuthController {
     private AuthService authService;
 
     @PostMapping("/signup")
-    public ResponseEntity<String> signup(@RequestBody RegisterRequest registerRequest) {
-        authService.signup(registerRequest);
+    public ResponseEntity<?> signup(@RequestBody RegisterRequest registerRequest) {
+        boolean result = authService.signup(registerRequest);
+        if (!result)
+            return new ResponseEntity<>("Username already exist", HttpStatus.BAD_REQUEST);
+
         return new ResponseEntity<>("Successfully Register", HttpStatus.CREATED);
+
     }
 
     @PostMapping("/login")
