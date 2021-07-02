@@ -15,8 +15,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
+
 @ExtendWith(MockitoExtension.class)
-class AuthServiceTest {
+public class AuthServiceTest {
     @Mock
     private UserRepo userRepo;
     @Mock
