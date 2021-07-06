@@ -17,7 +17,6 @@ public class ApiStepdefs extends SpringIntegrationTest {
     @When("^the client call /$")
     public void when() throws Throwable {
         response = restTemplate.getForEntity(url, String.class);
-
     }
 
     @Then("^the client recieves status code of (\\d+)$")
