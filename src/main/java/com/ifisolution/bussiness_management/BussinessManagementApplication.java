@@ -18,4 +18,9 @@ public class BussinessManagementApplication {
         return "Demo Api for Devops Fresher";
     }
 
+    @GetMapping("/admin")
+    public String admin() {
+        return "For admin only";
+    }
+
 }

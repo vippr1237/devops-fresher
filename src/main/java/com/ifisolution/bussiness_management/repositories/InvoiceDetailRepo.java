@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface InvoiceDetailRepo extends JpaRepository<InvoiceDetail, Long> {
-    public List<InvoiceDetail> findByInvoice(Invoice invoice);
+    List<InvoiceDetail> findByInvoice(Invoice invoice);
 }

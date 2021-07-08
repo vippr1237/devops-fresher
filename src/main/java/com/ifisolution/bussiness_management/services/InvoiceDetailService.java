@@ -56,6 +56,8 @@ public class InvoiceDetailService {
     public void deleteInvoiceDetail(Long id) {
         InvoiceDetail invoiceDetail = invoiceDetailRepo.findById(id).orElseThrow(() -> new InvoiceDetailNotFoundException("Invoice Detail by id " + id + " was not found"));
         Product product = productRepo.findById(invoiceDetail.getProduct().getId()).orElseThrow(() -> new ProductNotFoundException("Product by id " + invoiceDetail.getProduct().getId() + "was not found"));
+        Invoice invoice = invoiceRepo.findById(invoiceDetail.getInvoice().getId()).orElseThrow(() -> new InvoiceNotFoundException("Invoice by id " + invoiceDetail.getInvoice().getId() + "was not found"));
+        invoice.setTotal(invoice.getTotal() - product.getPrice() * invoiceDetail.getQuantity());
         product.setQuantity(product.getQuantity() + invoiceDetail.getQuantity());
         invoiceDetailRepo.deleteById(id);
     }
