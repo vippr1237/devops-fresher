@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-07-12T09:45:19.668Z",
+        "start_timestamp": "2021-07-14T02:35:08.309Z",
         "line": 3,
         "name": "client make call to GET /",
         "description": "",
@@ -13,19 +13,19 @@
         "steps": [
           {
             "result": {
-              "duration": 113123500,
+              "duration": 165029300,
               "status": "passed"
             },
             "line": 4,
             "name": "the client call /",
             "match": {
-              "location": "com.ifisolution.bussiness_management.stepdefs.ApiStepdefs.when()"
+              "location": "com.ifisolution.bussiness_management.stepdefs.apiStepdefs.clientCall()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 42001600,
+              "duration": 61039700,
               "status": "passed"
             },
             "line": 5,
@@ -37,13 +37,13 @@
                   "offset": 35
                 }
               ],
-              "location": "com.ifisolution.bussiness_management.stepdefs.ApiStepdefs.theClientRecievesStatusCodeOf(int)"
+              "location": "com.ifisolution.bussiness_management.stepdefs.apiStepdefs.clientReceives(int)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2001100,
+              "duration": 1997200,
               "status": "passed"
             },
             "line": 6,
@@ -51,11 +51,11 @@
             "match": {
               "arguments": [
                 {
-                  "val": "\"Demo Api for Devops Fresher\"",
-                  "offset": 23
+                  "val": "Demo Api for Devops Fresher",
+                  "offset": 24
                 }
               ],
-              "location": "com.ifisolution.bussiness_management.stepdefs.ApiStepdefs.theResponseShouldBe(java.lang.String)"
+              "location": "com.ifisolution.bussiness_management.stepdefs.apiStepdefs.clientReceivesReponse(java.lang.String)"
             },
             "keyword": "And "
           }
@@ -73,7 +73,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-07-12T09:45:19.888Z",
+        "start_timestamp": "2021-07-14T02:35:08.618Z",
         "line": 3,
         "name": "Create Product",
         "description": "",
@@ -83,7 +83,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6994500,
+              "duration": 5998800,
               "status": "passed"
             },
             "line": 4,
@@ -106,7 +106,7 @@
           },
           {
             "result": {
-              "duration": 182999000,
+              "duration": 186155200,
               "status": "passed"
             },
             "line": 6,
@@ -147,7 +147,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-12T09:45:20.097Z",
+        "start_timestamp": "2021-07-14T02:35:08.843Z",
         "line": 10,
         "name": "Get Products",
         "description": "",
@@ -157,7 +157,7 @@
         "steps": [
           {
             "result": {
-              "duration": 148002100,
+              "duration": 133993600,
               "status": "passed"
             },
             "line": 11,
@@ -169,6 +169,7 @@
           },
           {
             "result": {
+              "duration": 1001400,
               "status": "passed"
             },
             "line": 12,
@@ -198,7 +199,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-12T09:45:20.257Z",
+        "start_timestamp": "2021-07-14T02:35:08.990Z",
         "line": 15,
         "name": "Update User",
         "description": "",
@@ -208,7 +209,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1998600,
+              "duration": 3003500,
               "status": "passed"
             },
             "line": 16,
@@ -220,7 +221,7 @@
           },
           {
             "result": {
-              "duration": 25003200,
+              "duration": 33994100,
               "status": "passed"
             },
             "line": 17,
@@ -261,7 +262,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-12T09:45:20.295Z",
+        "start_timestamp": "2021-07-14T02:35:09.038Z",
         "line": 21,
         "name": "Delete User",
         "description": "",
@@ -271,7 +272,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2999900,
+              "duration": 3001300,
               "status": "passed"
             },
             "line": 22,
@@ -283,7 +284,7 @@
           },
           {
             "result": {
-              "duration": 36998500,
+              "duration": 36996500,
               "status": "passed"
             },
             "line": 23,
@@ -295,7 +296,6 @@
           },
           {
             "result": {
-              "duration": 1004100,
               "status": "passed"
             },
             "line": 24,
@@ -313,6 +313,7 @@
           },
           {
             "result": {
+              "duration": 1002400,
               "status": "passed"
             },
             "line": 25,

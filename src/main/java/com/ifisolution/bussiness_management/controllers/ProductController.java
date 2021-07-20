@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,9 +22,9 @@ import java.util.List;
 public class ProductController {
     private final ProductService productService;
 
-
-    @GetMapping("")
-    public ResponseEntity<List<ProductDto>> getAllProducts() {
+    //    @PreAuthorize("#jwt.subject=='4687270e-1582-4dab-ba58-f3e8f2a37606'")
+    @GetMapping
+    public ResponseEntity<List<ProductDto>> getAllProducts(@AuthenticationPrincipal Jwt jwt) {
         List<ProductDto> products = productService.findAllProducts();
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
@@ -37,13 +39,13 @@ public class ProductController {
         }
     }
 
-    @PostMapping("")
+    @PostMapping
     public ResponseEntity<Product> addProduct(@RequestBody ProductDto product) {
         Product newProduct = productService.addProduct(product);
         return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }
 
-    @PutMapping("")
+    @PutMapping
     public ResponseEntity<Product> updateProduct(@RequestBody ProductDto product) {
         Product updateProduct = productService.updateProduct(product);
         return new ResponseEntity<>(updateProduct, HttpStatus.OK);
