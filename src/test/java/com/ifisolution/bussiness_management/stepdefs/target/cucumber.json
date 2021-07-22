@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-07-14T02:35:08.309Z",
+        "start_timestamp": "2021-07-22T07:44:52.330Z",
         "line": 3,
         "name": "client make call to GET /",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 165029300,
+              "duration": 278998400,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 61039700,
+              "duration": 88997800,
               "status": "passed"
             },
             "line": 5,
@@ -43,15 +43,15 @@
           },
           {
             "result": {
-              "duration": 1997200,
+              "duration": 2996500,
               "status": "passed"
             },
             "line": 6,
-            "name": "the response should be \"Demo Api for Devops Fresher\"",
+            "name": "the response should be \"Demo Api for Devops Fresher running at port 8080\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Demo Api for Devops Fresher",
+                  "val": "Demo Api for Devops Fresher running at port 8080",
                   "offset": 24
                 }
               ],
@@ -73,7 +73,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-07-14T02:35:08.618Z",
+        "start_timestamp": "2021-07-22T07:44:52.793Z",
         "line": 3,
         "name": "Create Product",
         "description": "",
@@ -83,7 +83,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5998800,
+              "duration": 11001700,
               "status": "passed"
             },
             "line": 4,
@@ -106,7 +106,7 @@
           },
           {
             "result": {
-              "duration": 186155200,
+              "duration": 222594300,
               "status": "passed"
             },
             "line": 6,
@@ -147,7 +147,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-14T02:35:08.843Z",
+        "start_timestamp": "2021-07-22T07:44:53.049Z",
         "line": 10,
         "name": "Get Products",
         "description": "",
@@ -157,7 +157,7 @@
         "steps": [
           {
             "result": {
-              "duration": 133993600,
+              "duration": 132998700,
               "status": "passed"
             },
             "line": 11,
@@ -169,7 +169,6 @@
           },
           {
             "result": {
-              "duration": 1001400,
               "status": "passed"
             },
             "line": 12,
@@ -199,7 +198,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-14T02:35:08.990Z",
+        "start_timestamp": "2021-07-22T07:44:53.190Z",
         "line": 15,
         "name": "Update User",
         "description": "",
@@ -209,7 +208,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3003500,
+              "duration": 4000400,
               "status": "passed"
             },
             "line": 16,
@@ -221,7 +220,7 @@
           },
           {
             "result": {
-              "duration": 33994100,
+              "duration": 33995700,
               "status": "passed"
             },
             "line": 17,
@@ -262,7 +261,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-14T02:35:09.038Z",
+        "start_timestamp": "2021-07-22T07:44:53.240Z",
         "line": 21,
         "name": "Delete User",
         "description": "",
@@ -272,7 +271,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3001300,
+              "duration": 6212300,
               "status": "passed"
             },
             "line": 22,
@@ -284,7 +283,7 @@
           },
           {
             "result": {
-              "duration": 36996500,
+              "duration": 39930800,
               "status": "passed"
             },
             "line": 23,
@@ -313,7 +312,6 @@
           },
           {
             "result": {
-              "duration": 1002400,
               "status": "passed"
             },
             "line": 25,
